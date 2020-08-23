@@ -1,11 +1,15 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+
+ * Copyright (C) Joffer Systems, Inc - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * Written by Alok Dethe <dethealok@gmail.com>, <det.alex0110@gmail.com>, July 2020
+
  */
 package com.treemode.school.entity.repository;
 
 import com.treemode.school.entity.model.AsstPrincipal;
+import com.treemode.school.entity.model.Staff;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
