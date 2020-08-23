@@ -1,2 +1,2 @@
 # MindTree
-Educational Application, developed for Joffer Systems LTD.
+Educational Application, Demo Application.
