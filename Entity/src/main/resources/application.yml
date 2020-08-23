@@ -1,0 +1,16 @@
+## YAML Template.
+server:
+    port: 8890
+    servlet:
+      context-path: /
+    #jdbc:mysql://localhost:3306/gifdb
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/entitydb
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password:
+    hikari:
+      idle-timeout: 10000 
+    
