@@ -1,2 +1,4 @@
 .DS_Store
+Entity/src/main/resources/application.yml
+Entity/target
 Entity/src/main/java/com/treemode/school/entity/config
