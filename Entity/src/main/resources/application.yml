@@ -10,7 +10,7 @@ spring:
     url: jdbc:mysql://localhost:3306/entitydb
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: Have&$&$0921
+    password: 
     hikari:
       idle-timeout: 10000 
     
