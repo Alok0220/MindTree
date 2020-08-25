@@ -8,16 +8,10 @@
  */
 package com.treemode.school.entity.service;
 
-
-import com.treemode.school.entity.model.AsstPrincipal;
-import java.util.Optional;
-
 /**
  *
  * @author alokdethe
  */
-public interface AsstPrincipalService {
-    
-    public Optional<AsstPrincipal> getAsstPrincipalById(Long id);
+public interface SchoolService {
     
 }

@@ -6,18 +6,16 @@
  * Written by Alok Dethe <dethealok@gmail.com>, <det.alex0110@gmail.com>, July 2020
 
  */
-package com.treemode.school.entity.service;
+package com.treemode.school.entity.serviceImpl;
 
-
-import com.treemode.school.entity.model.AsstPrincipal;
-import java.util.Optional;
+import com.treemode.school.entity.service.SchoolService;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author alokdethe
  */
-public interface AsstPrincipalService {
-    
-    public Optional<AsstPrincipal> getAsstPrincipalById(Long id);
+@Service
+public class SchoolServiceImpl implements SchoolService {
     
 }

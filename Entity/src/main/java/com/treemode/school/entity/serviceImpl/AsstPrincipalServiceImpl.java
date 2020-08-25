@@ -8,7 +8,12 @@
  */
 package com.treemode.school.entity.serviceImpl;
 
+
+import com.treemode.school.entity.model.AsstPrincipal;
+import com.treemode.school.entity.repository.AsstPrincipalRepository;
 import com.treemode.school.entity.service.AsstPrincipalService;
+import java.util.Optional;
+import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 /**
@@ -17,5 +22,18 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class AsstPrincipalServiceImpl implements AsstPrincipalService {
+
+    
+    @Resource
+    private AsstPrincipalRepository asstPrincipalRepo;
+    
+    @Override
+    public java.util.Optional<AsstPrincipal> getAsstPrincipalById(Long id) {
+        
+        Optional<AsstPrincipal> asstPrincipal = asstPrincipalRepo.getAsstPrincipalById(id);
+        
+        return asstPrincipal;
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

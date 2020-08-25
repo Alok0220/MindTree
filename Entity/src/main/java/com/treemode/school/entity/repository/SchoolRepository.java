@@ -8,11 +8,8 @@
  */
 package com.treemode.school.entity.repository;
 
-import com.treemode.school.entity.model.AsstPrincipal;
-import java.util.Optional;
-import org.jboss.logging.Param;
+import com.treemode.school.entity.model.School;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -20,9 +17,6 @@ import org.springframework.stereotype.Repository;
  * @author alokdethe
  */
 @Repository
-public interface AsstPrincipalRepository extends JpaRepository<AsstPrincipal, Long> {
-    
-    @Query( value = "SELECT * FROM MST_ASST_PRINCIPAL WHERE ID = :id", nativeQuery = true )
-    public Optional<AsstPrincipal> getAsstPrincipalById(@Param long id);
+public interface SchoolRepository extends JpaRepository<School, Long> {
     
 }
