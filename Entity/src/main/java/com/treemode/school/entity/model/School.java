@@ -19,35 +19,16 @@ import javax.persistence.Table;
  * @author alokdethe
  */
 @Entity
-@Table( name = "MST_ASST_PRINCIPAL" )
-public class AsstPrincipal {
+@Table( name = "MST_SCHOOL" )
+public class School {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Long id;
 
-    private String firstName;
-    
-    private String lastName;
-    
     private String address;
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
+    
     public String getAddress() {
         return address;
     }
@@ -57,7 +38,6 @@ public class AsstPrincipal {
     }
     
     
-    
     public Long getId() {
         return id;
     }
@@ -65,7 +45,5 @@ public class AsstPrincipal {
     public void setId(Long id) {
         this.id = id;
     }
-    
-    
     
 }
