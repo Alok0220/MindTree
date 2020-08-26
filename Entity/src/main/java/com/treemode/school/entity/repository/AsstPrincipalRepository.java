@@ -10,9 +10,10 @@ package com.treemode.school.entity.repository;
 
 import com.treemode.school.entity.model.AsstPrincipal;
 import java.util.Optional;
-import org.jboss.logging.Param;
+//import org.jboss.logging.Param;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -23,6 +24,6 @@ import org.springframework.stereotype.Repository;
 public interface AsstPrincipalRepository extends JpaRepository<AsstPrincipal, Long> {
     
     @Query( value = "SELECT * FROM MST_ASST_PRINCIPAL WHERE ID = :id", nativeQuery = true )
-    public Optional<AsstPrincipal> getAsstPrincipalById(@Param long id);
+    public Optional<AsstPrincipal> getAsstPrincipalById(@Param("id") long id);
     
 }

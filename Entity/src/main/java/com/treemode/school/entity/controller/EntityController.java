@@ -8,11 +8,16 @@
  */
 package com.treemode.school.entity.controller;
 
+import com.treemode.school.entity.model.Parents;
+import com.treemode.school.entity.model.Students;
 import com.treemode.school.entity.service.ParentsService;
 import com.treemode.school.entity.service.StudentsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  *
@@ -28,6 +33,16 @@ public class EntityController {
     @Autowired
     private StudentsService studentService;
     
+    @GetMapping( value = { "getParents/{id}" }, produces = { "application/json" } )
+    public @ResponseBody Parents getParents( @PathVariable Long id ){
+        
+        return null;
+    }
     
+    @GetMapping( value = { "getStudents/{id}" }, produces = { "application/json" } )
+    public @ResponseBody Students getStudents( @PathVariable Long id ){
+        
+        return null;
+    }
     
 }
