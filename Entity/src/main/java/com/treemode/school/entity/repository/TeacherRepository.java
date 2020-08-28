@@ -8,8 +8,12 @@
  */
 package com.treemode.school.entity.repository;
 
+import com.treemode.school.entity.model.AsstPrincipal;
 import com.treemode.school.entity.model.Teacher;
+import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -18,5 +22,9 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface TeacherRepository extends JpaRepository<Teacher, Long> {
+    
+    @Query( value = "SELECT * FROM MST_TEACHER WHERE ID = :id", nativeQuery = true )
+    public Optional<Teacher> getTeacherById(@Param("id") long id);
+    
     
 }

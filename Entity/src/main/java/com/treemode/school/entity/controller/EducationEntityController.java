@@ -10,11 +10,14 @@ package com.treemode.school.entity.controller;
 
 import com.treemode.school.entity.model.AsstPrincipal;
 import com.treemode.school.entity.model.Parents;
+import com.treemode.school.entity.model.Principal;
 import com.treemode.school.entity.model.School;
 import com.treemode.school.entity.model.SeniorTeacher;
+import com.treemode.school.entity.model.Staff;
 import com.treemode.school.entity.service.AsstPrincipalService;
 import com.treemode.school.entity.service.ParentsService;
 import com.treemode.school.entity.service.PrincipalService;
+import com.treemode.school.entity.service.SchoolService;
 import com.treemode.school.entity.service.SeniorTeacherService;
 import com.treemode.school.entity.service.StaffService;
 import com.treemode.school.entity.service.StudentsService;
@@ -28,6 +31,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
@@ -52,6 +56,9 @@ public class EducationEntityController {
     @Autowired
     private TeacherService teacherService;
     
+    @Autowired
+    private SchoolService schoolService;
+    
     @GetMapping( value = { "getAsstPrincipal/{id}" }, produces = { "application/json" } )
     public @ResponseBody AsstPrincipal getAsstPrincipal( @PathVariable Long id ){
         
@@ -73,11 +80,41 @@ public class EducationEntityController {
         return null;
     }
     
-    @PostMapping( value = {"/AsstPrincipal"} )  
-    private int savePrincipal(@RequestBody AsstPrincipal asstPrincipal)   
-    {  
-        //booksService.saveOrUpdate(books);  
-       return 0;//books.getBookid();  
-    }  
+    @PostMapping( value = {"/SaveAsstPrincipal"} )  
+    private void saveAsstPrincipal(@RequestBody AsstPrincipal asstPrincipal)   
+    {   
+       Object obj = asstPrincipalService.saveAsstPrincipal(asstPrincipal);
+      
+    }
+    
+   
+    
+    @PostMapping( value = {"/SavePrincipal"} )  
+    private void savePrincipal(@RequestBody Principal principal)   
+    {   
+       Object obj = principalService.savePrincipal(principal);
+      
+    }
+    
+    @PostMapping( value = {"/SaveSchool"} )  
+    private void saveSchool(@RequestBody School school)   
+    {   
+       Object obj = schoolService.saveSchool(school);
+      
+    }
+    
+    @PostMapping( value = {"/SaveSeniorTeacher"} )  
+    private void saveSeniorTeacher(@RequestBody SeniorTeacher seniorTeacher)   
+    {   
+       Object obj = seniorTeacherService.saveSeniorTeacher(seniorTeacher);
+      
+    }
+    
+    @PostMapping( value = {"/SaveStaff"} )  
+    private void saveStaff(@RequestBody Staff staff)   
+    {   
+       Object obj = staffService.saveStaff(staff);
+      
+    }
     
 }

@@ -16,6 +16,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -43,6 +45,20 @@ public class EntityController {
     public @ResponseBody Students getStudents( @PathVariable Long id ){
         
         return null;
+    }
+    
+     @PostMapping( value = {"/SaveParents"} )  
+    private void saveParents(@RequestBody Parents parents)   
+    {   
+       Object obj = parentsService.saveParents(parents);
+      
+    }
+    
+    @PostMapping( value = {"/SaveStudents"} )  
+    private void saveParents(@RequestBody Students students)   
+    {   
+       Object obj = studentService.saveStudents(students);
+      
     }
     
 }

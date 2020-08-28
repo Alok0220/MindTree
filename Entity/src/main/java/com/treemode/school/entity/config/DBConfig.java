@@ -12,6 +12,8 @@ import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
 import java.sql.Connection;
+import org.springframework.boot.jdbc.DataSourceBuilder;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -31,6 +33,20 @@ public class DBConfig {
     
     public DBConfig(){
         
+        
+    }
+    
+    @Bean
+    public HikariDataSource DatabaseConfig(){
+        
+        DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
+        dataSourceBuilder.type(HikariDataSource.class);
+        dataSourceBuilder.username("root");
+        dataSourceBuilder.password("Have&$&$0921");
+        dataSourceBuilder.url("jdbc:mysql://localhost:3306/entitydb");
+        dataSourceBuilder.driverClassName("com.mysql.cj.jdbc.Driver");
+        
+        return (HikariDataSource) dataSourceBuilder.build();
     }
     
     public Connection getConnection(){

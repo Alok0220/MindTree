@@ -10,7 +10,10 @@ package com.treemode.school.entity.repository;
 
 import com.treemode.school.entity.model.AsstPrincipal;
 import com.treemode.school.entity.model.Staff;
+import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -19,5 +22,9 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface StaffRepository extends JpaRepository<Staff, Long> {
+    
+    @Query( value = "SELECT * FROM MST_STAFF WHERE ID = :id", nativeQuery = true )
+    public Optional<Staff> getStaffById(@Param("id") long id);
+    
     
 }
