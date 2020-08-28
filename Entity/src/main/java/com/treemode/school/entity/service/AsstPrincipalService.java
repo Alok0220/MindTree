@@ -20,4 +20,6 @@ public interface AsstPrincipalService {
     
     public Optional<AsstPrincipal> getAsstPrincipalById(Long id);
     
+    public AsstPrincipal saveAsstPrincipal(AsstPrincipal asstPrincipal);
+    
 }

@@ -8,10 +8,17 @@
  */
 package com.treemode.school.entity.service;
 
+import com.treemode.school.entity.model.AsstPrincipal;
+import com.treemode.school.entity.model.Parents;
+import java.util.Optional;
+
 /**
  *
  * @author alokdethe
  */
 public interface ParentsService {
     
+    public Optional<Parents> getParentsById(Long id);
+    
+    public Parents saveParents(Parents parents);
 }

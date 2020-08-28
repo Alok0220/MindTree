@@ -8,10 +8,18 @@
  */
 package com.treemode.school.entity.service;
 
+import com.treemode.school.entity.model.AsstPrincipal;
+import com.treemode.school.entity.model.Principal;
+import com.treemode.school.entity.model.School;
+import java.util.Optional;
+
 /**
  *
  * @author alokdethe
  */
 public interface SchoolService {
     
+    public Optional<School> getSchoolById(Long id);
+    
+    public School saveSchool(School school);
 }

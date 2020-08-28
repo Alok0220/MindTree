@@ -8,7 +8,11 @@
  */
 package com.treemode.school.entity.serviceImpl;
 
+import com.treemode.school.entity.model.School;
+import com.treemode.school.entity.repository.SchoolRepository;
 import com.treemode.school.entity.service.SchoolService;
+import java.util.Optional;
+import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 /**
@@ -17,5 +21,19 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class SchoolServiceImpl implements SchoolService {
+
+    @Resource
+    private SchoolRepository schoolRepo;
+    
+    @Override
+    public Optional<School> getSchoolById(Long id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public School saveSchool(School school) {
+        return schoolRepo.saveAndFlush(school);
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

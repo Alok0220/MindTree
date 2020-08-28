@@ -8,7 +8,11 @@
  */
 package com.treemode.school.entity.serviceImpl;
 
+import com.treemode.school.entity.model.Principal;
+import com.treemode.school.entity.repository.PrincipalRepository;
 import com.treemode.school.entity.service.PrincipalService;
+import java.util.Optional;
+import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 /**
@@ -17,5 +21,19 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class PrincipalServiceImpl implements PrincipalService {
+
+    @Resource
+    private PrincipalRepository principalRepo;
+    
+    @Override
+    public Optional<Principal> getPrincipalById(Long id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Principal savePrincipal(Principal principal) {
+        return principalRepo.saveAndFlush(principal);
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

@@ -8,10 +8,18 @@
  */
 package com.treemode.school.entity.service;
 
+import com.treemode.school.entity.model.AsstPrincipal;
+import com.treemode.school.entity.model.School;
+import com.treemode.school.entity.model.SeniorTeacher;
+import java.util.Optional;
+
 /**
  *
  * @author alokdethe
  */
 public interface SeniorTeacherService {
     
+    public Optional<SeniorTeacher> getSeniorTeacherById(Long id);
+    
+    public SeniorTeacher saveSeniorTeacher(SeniorTeacher seniorTeacher);
 }

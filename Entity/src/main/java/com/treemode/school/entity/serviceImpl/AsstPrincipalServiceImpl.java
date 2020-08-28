@@ -35,5 +35,14 @@ public class AsstPrincipalServiceImpl implements AsstPrincipalService {
         return asstPrincipal;
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public AsstPrincipal saveAsstPrincipal(AsstPrincipal asstPrincipal) {
+        
+        return asstPrincipalRepo.saveAndFlush(asstPrincipal);
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
     
 }
