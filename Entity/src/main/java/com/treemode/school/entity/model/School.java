@@ -8,6 +8,7 @@
  */
 package com.treemode.school.entity.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,6 +27,7 @@ public class School {
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Long id;
 
+    @Column( name = "address" )
     private String address;
 
     
