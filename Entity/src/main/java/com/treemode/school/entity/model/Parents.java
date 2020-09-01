@@ -24,7 +24,6 @@ import javax.persistence.Table;
 public class Parents {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column( name = "id" )
     private Long id;
 

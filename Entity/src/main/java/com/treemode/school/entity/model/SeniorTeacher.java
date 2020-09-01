@@ -23,8 +23,7 @@ import javax.persistence.Table;
 @Table( name = "MST_SENIOR_TEACHER" )
 public class SeniorTeacher {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) 
+    @Id 
     private Long id;
 
     @Column( name = "first_name" )

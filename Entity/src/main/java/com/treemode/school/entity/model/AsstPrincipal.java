@@ -24,7 +24,8 @@ import javax.persistence.Table;
 public class AsstPrincipal {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) 
+    /*@GeneratedValue(strategy = GenerationType.IDENTITY)*/
+    @Column( name = "ID", unique = true )
     private Long id;
 
     @Column( name = "first_name" )

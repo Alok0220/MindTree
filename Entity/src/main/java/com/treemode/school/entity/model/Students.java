@@ -24,7 +24,6 @@ import javax.persistence.Table;
 public class Students {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Long id;
 
     @Column( name = "first_name"  )
