@@ -26,4 +26,5 @@ public interface AsstPrincipalRepository extends JpaRepository<AsstPrincipal, Lo
     @Query( value = "SELECT * FROM MST_ASST_PRINCIPAL WHERE ID = :id", nativeQuery = true )
     public Optional<AsstPrincipal> getAsstPrincipalById(@Param("id") long id);
     
+    
 }

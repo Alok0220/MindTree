@@ -1,0 +1,16 @@
+## YAML Template.
+server:
+    port: 8890
+    servlet:
+      context-path: /
+    #jdbc:mysql://localhost:3306/gifdb
+spring:
+  datasource:
+    hikari:
+      idle-timeout: 10000 
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        
+    
