@@ -42,7 +42,7 @@ public class DBConfig {
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.type(HikariDataSource.class);
         dataSourceBuilder.username("root");
-        dataSourceBuilder.password("Have&$&$0921");
+        dataSourceBuilder.password("");
         dataSourceBuilder.url("jdbc:mysql://localhost:3306/entitydb");
         dataSourceBuilder.driverClassName("com.mysql.cj.jdbc.Driver");
         
