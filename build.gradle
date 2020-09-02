@@ -1,0 +1,21 @@
+buildscripts {
+
+	repositories {
+		jcenter()
+		mavenCentral()
+	}
+	dependencies {
+		classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+               classpath "com.avast.gradle:gradle-docker-compose-plugin:${dockerComposeVersion}"
+	}
+}
+
+apply plugin: 'docker-compose'
+
+dockerCompose{
+
+	
+
+}
+
+
