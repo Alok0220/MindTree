@@ -1,3 +1,3 @@
-ARG baseImageVersion
-FROM joffer/mindtree-en-base-image:$baseImageVersion
-COPY build/libs/en-service-*.jar service.jar
+ARG baseImageVersion=3.4
+FROM alpine:${baseImageVersion}
+COPY target/Entity-1.0-SNAPSHOT.jar service.jar

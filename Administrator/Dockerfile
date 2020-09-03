@@ -1,3 +1,3 @@
-ARG baseImageVersion
-FROM joffer/mindtree-adm-base-image:$baseImageVersion
-COPY build/libs/adm-service-*.jar service.jar
+ARG baseImageVersion=3.4
+FROM alpine:${baseImageVersion}
+COPY target/Administrator-1.0-SNAPSHOT.jar service.jar

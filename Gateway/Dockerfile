@@ -1,3 +1,3 @@
-ARG baseImageVersion
-FROM joffer/mindtree-gt-base-image:$baseImageVersion
-COPY build/libs/gt-service-*.jar service.jar
+ARG baseImageVersion=3.4
+FROM alpine:${baseImageVersion}
+COPY target/Gateway-1.0-SNAPSHOT.jar service.jar
