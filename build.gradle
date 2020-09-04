@@ -12,10 +12,24 @@ buildscripts {
 
 apply plugin: 'docker-compose'
 
+
+startDblogComposeUp.dependsOn(":"+"Administrator"+":assemble")
+startDblogComposeUp.dependsOn(":"+"Entity"+":assemble")
+startDblogComposeUp.dependsOn(":"+"Reports"+":assemble")
+startDblogComposeUp.dependsOn(":"+"Gateway"+":assemble")
+
 dockerCompose{
 
 	
 
+}
+
+task buildAndStartServicesMySql(type: GradleBuild) {
+    tasks = ["startDblogComposeUp"]
+}
+
+task stopServicesMySql(type: GradleBuild) {
+    tasks = ["startDblogComposeDown"]
 }
 
 
