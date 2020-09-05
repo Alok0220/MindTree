@@ -1,0 +1,8 @@
+## YAML File
+version: '3'
+services:
+  gateway:
+    build: .
+    ports:
+      - "8872:8080"
+   

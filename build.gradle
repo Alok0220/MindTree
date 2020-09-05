@@ -20,7 +20,7 @@ dockerCompose{
 		useComposeFiles = ["docker-compose-start-Dblog.yml"]
 		removeContainers = project.ext.removeContainers
 	}
-
+	
 }
 
 startDblogComposeUp.dependsOn(":"+"Administrator"+":assemble")
