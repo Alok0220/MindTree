@@ -13,16 +13,20 @@ buildscripts {
 apply plugin: 'docker-compose'
 
 
+dockerCompose{
+
+	startDblog{
+		projectName = null
+		useComposeFiles = ["docker-compose-start-Dblog.yml"]
+		removeContainers = project.ext.removeContainers
+	}
+
+}
+
 startDblogComposeUp.dependsOn(":"+"Administrator"+":assemble")
 startDblogComposeUp.dependsOn(":"+"Entity"+":assemble")
 startDblogComposeUp.dependsOn(":"+"Reports"+":assemble")
 startDblogComposeUp.dependsOn(":"+"Gateway"+":assemble")
-
-dockerCompose{
-
-	
-
-}
 
 task buildAndStartServicesMySql(type: GradleBuild) {
     tasks = ["startDblogComposeUp"]
