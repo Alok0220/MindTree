@@ -1,0 +1,8 @@
+## YAML File
+version: '3'
+services:
+  administrator:
+    build: .
+    ports:
+      - "8874:8080"
+   
