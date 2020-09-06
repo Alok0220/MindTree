@@ -1,4 +1,4 @@
-buildscripts {
+buildscript {
 
 	repositories {
 		jcenter()
@@ -6,7 +6,7 @@ buildscripts {
 	}
 	dependencies {
 		classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
-               classpath "com.avast.gradle:gradle-docker-compose-plugin:${dockerComposeVersion}"
+               classpath "com.avast.gradle:gradle-docker-compose-plugin:0.12.0"
 	}
 }
 
@@ -23,10 +23,6 @@ dockerCompose{
 	
 }
 
-startDblogComposeUp.dependsOn(":"+"Administrator"+":assemble")
-startDblogComposeUp.dependsOn(":"+"Entity"+":assemble")
-startDblogComposeUp.dependsOn(":"+"Reports"+":assemble")
-startDblogComposeUp.dependsOn(":"+"Gateway"+":assemble")
 
 task buildAndStartServicesMySql(type: GradleBuild) {
     tasks = ["startDblogComposeUp"]
